@@ -8,6 +8,7 @@
     --primary-font-color: white;
     --secundary-font-color: #274063;
     --main-font: Roboto, Arial, sans-serif;
+    --second-font: Bebas, sans-serif;
 }
 
 /*Reset*/
@@ -84,6 +85,35 @@
         width: 80px;
     }
 
+    .titulo {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 80px;
+        letter-spacing: 3px;
+        line-height: 0.8; /* controla espaçamento entre linhas */
+        letter-spacing: 4px;
+        margin: 2rem;
+
+}
+    .titulo span {
+        display: block;
+        color:var(--primary-color);
+}
+     #ninjutsu {
+        font-size: 85px;
+        letter-spacing: 10px;
+}
+    .sub-titulo {
+        margin: 2rem;
+        font-family: var(--main-font);
+        font-size: 25px;
+        
+        line-height: 1.2;
+        
+    }
+    .sub-titulo span {
+        display: block;
+    }
+
 }
 
 /*---------------------------------------DESKTOP----------------------------------------*/
@@ -121,4 +151,7 @@
         height: auto;
         margin-left: 0;
     }
+
+    /*-----------------------MAIN--------------------*/
+
 }

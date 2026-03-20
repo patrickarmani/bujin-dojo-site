@@ -19,44 +19,69 @@
   padding: 0;
 }
 
+/* Estilo base do botão */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: var(--quaternary-color);
+    font-family: var(--main-font);
+    cursor: pointer;
+}
+
 /* Mobile */
 @media (max-width: 600px){
 
     /*HEADER*/
     header {
         background-color: var(--primary-color) ;
+        padding: 1rem;
     }
 
     nav {
-        display: none;
-    }
-
-    nav.active {
         display: block;
-    }
-
-    nav a {
-        font-family: var(--main-font);
-        font-size: 10pt;
-        padding: 10px;
-        margin-left: 17em;
-        color:#4091CD;
-
     }
 
     .menu-toggle {
         display: block;
+        margin-left: 15rem;
     }
+
+    .menu {
+        display: none;
+        list-style: none;
+        margin-top: 1rem;
+        margin-left: 15rem;
+    }
+
+    .menu.active {
+        display: block;
+    }
+
+    .menu li {
+        margin-bottom: 10px;
+    }
+
+    .menu a {
+        font-family: var(--main-font);
+        font-size: 10pt;
+        background-color: var(--quinternary-color);
+        max-width: 200px;
+        color: #4091CD;
+        text-decoration: none;
+    }
+
 }
 
 /*---------------------------------------DESKTOP----------------------------------------*/
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
     /* botão escondido no desktop */
     .menu-toggle {
         display: none;
         font-size: 24px;
         background: none;
         border: none;
-        color: white;
+        color: Var(--quaternary-color);
     }
 }

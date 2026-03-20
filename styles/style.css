@@ -1,0 +1,35 @@
+:root {
+    --primary-color: #060A19;
+    --secundary-color: #2E5175;
+    --tertiary-color: #010204;
+    --quaternary-color: #A8C5E5;
+    --quinternary-color:#4091CD;
+    --sextnary-color: #
+    --primary-font-color: white;
+    --secundary-font-color: #274063;
+    --main-font: Roboto, Arial, sans-serif;
+}
+
+/*Reset*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Mobile */
+@media (max-width: 600px){
+    header {
+        background-color: var(--primary-color) ;
+    }
+    nav a {
+        font-family: var(--main-font);
+        font-size: 10pt;
+        padding: 10px;
+        margin-left: 17em;
+        color:#4091CD;
+
+    }
+}

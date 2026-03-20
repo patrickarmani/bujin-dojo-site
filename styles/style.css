@@ -104,7 +104,7 @@
 }
     .sub-titulo {
         margin: 2rem;
-        font-family: var(--main-font);
+        font-family: 'Bebas Neue', sans-serif;
         font-size: 25px;
         
         line-height: 1.2;

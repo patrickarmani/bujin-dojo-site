@@ -4,7 +4,7 @@
     --tertiary-color: #010204;
     --quaternary-color: #A8C5E5;
     --quinternary-color:#4091CD;
-    --sextnary-color: #
+    --sextnary-color: #242934;
     --primary-font-color: white;
     --secundary-font-color: #274063;
     --main-font: Roboto, Arial, sans-serif;
@@ -21,9 +21,20 @@
 
 /* Mobile */
 @media (max-width: 600px){
+
+    /*HEADER*/
     header {
         background-color: var(--primary-color) ;
     }
+
+    nav {
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+    }
+
     nav a {
         font-family: var(--main-font);
         font-size: 10pt;
@@ -31,5 +42,21 @@
         margin-left: 17em;
         color:#4091CD;
 
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/*---------------------------------------DESKTOP----------------------------------------*/
+@media (max-width: 1024px) {
+    /* botão escondido no desktop */
+    .menu-toggle {
+        display: none;
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: white;
     }
 }

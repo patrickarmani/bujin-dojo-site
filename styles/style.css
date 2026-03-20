@@ -30,29 +30,38 @@
     cursor: pointer;
 }
 
+/* Logo base */
+#logo {
+    width: 70px;
+    height: auto;
+    display: block;
+}
+
+
 /* Mobile */
 @media (max-width: 600px){
 
     /*HEADER*/
     header {
         background-color: var(--primary-color) ;
-        padding: 1rem;
+        padding: 0.5rem 1rem;
     }
 
     nav {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .menu-toggle {
         display: block;
-        margin-left: 15rem;
+        margin-right: 1rem;
     }
 
     .menu {
         display: none;
         list-style: none;
         margin-top: 1rem;
-        margin-left: 15rem;
     }
 
     .menu.active {
@@ -71,17 +80,45 @@
         color: #4091CD;
         text-decoration: none;
     }
+   #logo {
+        width: 80px;
+    }
 
 }
 
 /*---------------------------------------DESKTOP----------------------------------------*/
+/* Desktop */
 @media (min-width: 1024px) {
-    /* botão escondido no desktop */
+    header {
+        background-color: var(--primary-color);
+        padding: 0.5rem 1rem;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     .menu-toggle {
         display: none;
-        font-size: 24px;
-        background: none;
-        border: none;
-        color: Var(--quaternary-color);
+    }
+
+    .menu {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+    }
+
+    .menu a {
+        color: var(--primary-font-color);
+        text-decoration: none;
+        font-family: var(--main-font);
+    }
+
+    #logo {
+        width: 70px;
+        height: auto;
+        margin-left: 0;
     }
 }

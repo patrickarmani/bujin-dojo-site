@@ -114,6 +114,46 @@
         display: block;
     }
 
+    .chamada {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 20px;
+        color:var(--quinternary-color);
+        margin: 2rem;
+        letter-spacing: 5px;
+    }
+
+    .carousel-section {
+        margin-top: 10px;
+        padding-left: 20px;
+        overflow: hidden;
+}
+
+.carousel-track-container {
+    width: 360px;          /* área visível total */
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 12px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel-image {
+    width: 280px;          /* quadrante vermelho */
+    height: 250px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid var(--); /* só para você visualizar igual ao esquema */
+    background-color: #ddd;
+}
+
+/* próxima imagem semi-oculta */
+.carousel-image + .carousel-image {
+    border-color: gold;
+}
+
 }
 
 /*---------------------------------------DESKTOP----------------------------------------*/
@@ -153,5 +193,4 @@
     }
 
     /*-----------------------MAIN--------------------*/
-
 }

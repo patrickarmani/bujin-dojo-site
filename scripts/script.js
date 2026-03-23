@@ -16,7 +16,7 @@ const carouselCounter = document.getElementById('carouselCounter');
 const imageData = [
     {
         caption: 'Bu Jin Dojo',
-        aside: 'Seja bem vindo(a) à nossa escola para treinamento de Ninjas. Aqui ensinamos Ninjutsu da escola Bujinkan'
+        aside: 'Seja bem vindo(a) à nossa escola para treinamento de Ninjas. Aqui ensinamos Ninjutsu da escola Bujinkan.'
     },
     {
         caption: 'Técnica de torção',
@@ -27,12 +27,12 @@ const imageData = [
         aside: 'No Ninjutsu, as técnicas de projeção não servem apenas para derrubar — elas ensinam controle. Desenvolvem domínio emocional, aumentam a autoconfiança e elevam o controle do corpo e da mente.'
     },
     {
-        caption: 'Defesa pessoal',
-        aside: 'A prática marcial ajuda o aluno a reagir com mais equilíbrio e segurança.'
+        caption: 'Técnicas de Imobilização',
+        aside: 'As imobilizações ajudam a controlar uma situação com segurança e responsabilidade. Nela se desenvolve e aprimora o senso de autocontrole e tomada de decisão sob pressão.'
     },
     {
-        caption: 'Postura marcial',
-        aside: 'A postura correta transmite firmeza, presença e base sólida para o movimento.'
+        caption: 'Uniforme de Treino',
+        aside: 'Nosso uniforme é composto de Kimono da cor preta, Hakama e os emblemas de graduação. O kimono é exigido após o 2º mês de prática, os empblemas e o simbolos da escola apos a primeira graduação. O Hakama quando orientado(a).'
     },
     {
         caption: 'Treino técnico',

@@ -23,8 +23,8 @@ const imageData = [
         aside: 'As torções trabalham controle corporal, aplicação técnica e consciência do movimento.'
     },
     {
-        caption: 'Treino com espada',
-        aside: 'O treino com armas desenvolve atenção, postura, coordenação e disciplina.'
+        caption: 'Técnicas de projeção',
+        aside: 'No Ninjutsu, as técnicas de projeção não servem apenas para derrubar — elas ensinam controle. Desenvolvem domínio emocional, aumentam a autoconfiança e elevam o controle do corpo e da mente.'
     },
     {
         caption: 'Defesa pessoal',

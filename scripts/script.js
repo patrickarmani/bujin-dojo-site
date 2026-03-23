@@ -15,8 +15,8 @@ const carouselCounter = document.getElementById('carouselCounter');
 
 const imageData = [
     {
-        caption: 'Kimono e espada',
-        aside: 'A espada simboliza tradição, precisão técnica e responsabilidade no treino marcial.'
+        caption: 'Bu Jin Dojo',
+        aside: 'Seja bem vindo(a) à nossa escola para treinamento de Ninjas. Aqui ensinamos Ninjutsu da escola Bujinkan'
     },
     {
         caption: 'Técnica de torção',

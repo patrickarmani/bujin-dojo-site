@@ -11,6 +11,7 @@ const images = document.querySelectorAll('.carousel-image');
 const captionBtn = document.getElementById('captionBtn');
 const aside = document.getElementById('carouselAside');
 const asideText = document.getElementById('asideText');
+const carouselCounter = document.getElementById('carouselCounter');
 
 const imageData = [
     {
@@ -53,17 +54,25 @@ const imageData = [
 
 let currentIndex = 0;
 let startX = 0;
-let currentTranslate = 0;
 let isDragging = false;
+
+function updateActiveImage() {
+    images.forEach((img, index) => {
+        img.classList.toggle('active', index === currentIndex);
+    });
+}
 
 function updateCarousel() {
     const imageWidth = images[0].offsetWidth + 12;
-    currentTranslate = -(currentIndex * imageWidth);
+    const currentTranslate = -(currentIndex * imageWidth);
     track.style.transform = `translateX(${currentTranslate}px)`;
 
     captionBtn.textContent = imageData[currentIndex].caption;
     asideText.textContent = imageData[currentIndex].aside;
+    carouselCounter.textContent = `${currentIndex + 1}/${images.length}`;
+
     aside.classList.remove('active');
+    updateActiveImage();
 }
 
 function nextSlide() {

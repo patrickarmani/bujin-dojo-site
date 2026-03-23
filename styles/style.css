@@ -132,8 +132,17 @@
 .carousel-info {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 10px;
     margin-bottom: 0.8rem;
+    width: 280px;
+}
+
+.carousel-info-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
 }
 
 .carousel-bullet {
@@ -153,6 +162,49 @@
     color: var(--primary-color);
     text-align: left;
     cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.carousel-counter {
+    font-family: var(--main-font);
+    font-size: 12px;
+    color: var(--quinternary-color);
+    flex-shrink: 0;
+}
+
+.carousel-track-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    touch-action: pan-y;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 12px;
+    transition: transform 0.35s ease;
+    align-items: center;
+}
+
+.carousel-image {
+    width: 260px;
+    height: 250px;
+    object-fit: cover;
+    flex-shrink: 0;
+    user-select: none;
+    -webkit-user-drag: none;
+    transform: scale(0.92);
+    transition: transform 0.35s ease, opacity 0.35s ease;
+    opacity: 0.72;
+}
+
+.carousel-image.active {
+    transform: scale(1);
+    opacity: 1;
 }
 
 .carousel-aside {

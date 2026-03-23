@@ -134,3 +134,14 @@ container.addEventListener('mouseleave', () => {
 window.addEventListener('resize', updateCarousel);
 
 updateCarousel();
+
+//pertence à pagina about.html //
+
+const asideCloseBtn = document.querySelector('.aside-close');
+const sobreAside = document.getElementById('sobreAside');
+
+if (asideCloseBtn && sobreAside) {
+    asideCloseBtn.addEventListener('click', () => {
+        sobreAside.style.display = 'none';
+    });
+}

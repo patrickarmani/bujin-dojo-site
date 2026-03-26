@@ -16,11 +16,11 @@ const carouselCounter = document.getElementById('carouselCounter');
 const imageData = [
     {
         caption: 'Bu Jin Dojo',
-        aside: 'Seja bem vindo(a) à nossa escola para treinamento de Ninjas. Aqui ensinamos Ninjutsu da escola Bujinkan.'
+        aside: 'Seja bem vindo(a) à nossa escola para treinamento de Ninjas em Belo Horizonte. Aqui ensinamos Ninjutsu da escola Bujinkan.'
     },
     {
         caption: 'Técnica de torção',
-        aside: 'As torções trabalham controle corporal, aplicação técnica e consciência do movimento.'
+        aside: 'No Ninjutsu treinamos torções. Neste treino desenvolvemos controle corporal, aplicação técnica e consciência do movimento.'
     },
     {
         caption: 'Técnicas de projeção',
@@ -28,27 +28,27 @@ const imageData = [
     },
     {
         caption: 'Técnicas de Imobilização',
-        aside: 'As imobilizações ajudam a controlar uma situação com segurança e responsabilidade. Nela se desenvolve e aprimora o senso de autocontrole e tomada de decisão sob pressão.'
+        aside: 'Algumas vezes é necessário controlar uma situação com segurança e responsabilidade. Aqui você desenvolve e aprimora o senso de autocontrole e a tomada de decisão sob pressão.'
+    },
+    {
+        caption: 'Técnicas de punho e chutes',
+        aside: 'Dentro do grupo de técnicas o Ninjutsu também oferece variantes na forma de golpes com os punhos e chutes, bem como suas defesas',
     },
     {
         caption: 'Uniforme de Treino',
-        aside: 'Nosso uniforme é composto de Kimono da cor preta, Hakama e os emblemas de graduação. O kimono é exigido após o 2º mês de prática, os empblemas e o simbolos da escola apos a primeira graduação. O Hakama quando orientado(a).'
+        aside: 'Nós usamos Kimono e camisa na cor preta, Hakama e jikka tabi. Até o segundo mês você tem liberdade para frequentar a aula sem o kimono. Em momento oportuno você adquire o uniforme comprelo.'
     },
     {
-        caption: 'Treino técnico',
-        aside: 'A repetição técnica fortalece memória corporal e qualidade de execução.'
+        caption: 'Treino com armas tradicionais',
+        aside: 'Com um arsenal rico e diversificado o Ninjutusu possui numerosas armas de combate tradicionais como bastões, espadas, armas de corte e acessórios que podem ser adaptados para situações cotidianas.'
     },
     {
-        caption: 'Disciplina no dojo',
-        aside: 'O dojo é um espaço de respeito, constância e aperfeiçoamento pessoal.'
+        caption: 'Avanço técnico',
+        aside: 'No dojo respeitamos o limite do corpo e do aprendizado. Entendemos que cada individuo é único e o(a) praticante avança do absoluto zero progredindo dentro dos 10 kyus ou graus que antecedem a faixa preta.'
     },
     {
-        caption: 'Movimento corporal',
-        aside: 'Treinar o corpo com consciência melhora mobilidade, reação e estabilidade.'
-    },
-    {
-        caption: 'Arte e tradição',
-        aside: 'A arte marcial preserva valores tradicionais e promove crescimento interior.'
+        caption: 'Propósito',
+        aside: 'O Ninjtusu não visa campeonatos ou competições. Treinamos com foco em auto-defesa e sobrevivência, estratégia de luta e estilo de vida.'
     }
 ];
 

@@ -26,8 +26,8 @@
     font-size: 24px;
     background: none;
     border: none;
-    color: var(--quaternary-color);
-    font-family: var(--main-font);
+    color: var(--primary-color);
+    font-family: var(--second-font);
     cursor: pointer;
 }
 
@@ -61,6 +61,7 @@
     }
 
     .menu {
+        color:var(--primary-color);
         display: none;
         list-style: none;
         margin-top: 1rem;
@@ -75,11 +76,11 @@
     }
 
     .menu a {
-        font-family: var(--main-font);
+        font-family: var(--second-font);
         font-size: 10pt;
         background-color: var(--quinternary-color);
         max-width: 200px;
-        color: #4091CD;
+        color: var(--primary-color);
         text-decoration: none;
     }
    #logo {
@@ -342,9 +343,23 @@
     color: var(--primary-color);
 }
 
-
-
 /*--------------------------------------end about.html---------------------------------*/
+
+/*-------------------------------------- bujinkan.html---------------------------------*/
+
+.paragrafo {
+    color: var(--primary-color);
+    font-family: var(--main-font);
+    line-height: 2; 
+    font-weight: 200; 
+    margin: 16px;
+    text-align: left; 
+    justify-content: center; 
+    text-transform: uppercase;
+}
+
+
+/*------------------------------------- bujinkan.html----------------------------------*/
 
 /*---------------------------------------DESKTOP----------------------------------------*/
 /* Desktop */

@@ -40,7 +40,7 @@ const imageData = [
     },
     {
         caption: 'Treino com armas tradicionais',
-        aside: 'Com um arsenal rico e diversificado o Ninjutusu possui numerosas armas de combate tradicionais como bastões, espadas, armas de corte e acessórios que podem ser adaptados para situações cotidianas.'
+        aside: 'Com um arsenal rico e diversificado o Ninjutusu possui numerosas armas de combate tradicionais como bastões, espadas, armas de corte e acessórios que podem ser adaptados para situações cotidianas."'
     },
     {
         caption: 'Avanço técnico',

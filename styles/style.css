@@ -124,6 +124,14 @@
         letter-spacing: 5px;
     }
 
+    #address {
+        font-family: var(--second-font);
+        font-weight: 200;
+        color: var(--sextnary-color);
+        font-size: small;
+        margin: 2rem;
+    }
+
 .carousel-section {
     margin: 2rem 0 0 0;
     padding-left: 20px;
@@ -362,14 +370,14 @@
     display: block;
 
     width: 90%; /* ocupa quase toda a tela */
-    margin: 2rem auto;
+    margin: 1rem auto;
 
-    padding: 1.5rem;
+    padding: 0.5rem;
 
-    background-color: #000;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--quaternary-color);
 
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--secundary-color);
 
     text-align: center;
 
@@ -384,8 +392,8 @@
 
 .cta-aside:hover {
     background-color: var(--primary-color);
-    color: #000;
-    transform: scale(1.02);
+    color: var(--quaternary-color);
+    transform: scale(1.05);
 }
 
 

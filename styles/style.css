@@ -377,18 +377,42 @@
     background-color: var(--primary-color);
     color: var(--quaternary-color);
 
-    border: 1px solid var(--secundary-color);
+    border-radius: 12px solid var(--secundary-color);
 
     text-align: center;
 
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 3px;
-    font-size: 16px;
+    font-size: 17px;
 
     text-decoration: none;
 
-    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+    transition: all 0.3s ease;
 }
+
+.cta-aside:active {
+    transform: scale(0.97);
+}
+/* animação do botão de cta*/
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(64, 145, 205, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(64, 145, 205, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(64, 145, 205, 0);
+    }
+}
+
+.cta-aside {
+    animation: pulse 2s infinite;
+}
+
+/* fim da animação do botao de cta*/
 
 .cta-aside:hover {
     background-color: var(--primary-color);
@@ -442,13 +466,13 @@
 
 /*----------------------bujinkan.html--------------*/
 
- .cta-aside {
+     .cta-aside {
         width: 40%;
         font-size: 18px;
     }
 
-.cta-aside:hover {
-    background-color: var(--primary-color);
-    color: #000;
-    transform: scale(1.02);
-}
+    .cta-aside:hover {
+        transform: scale(1.05);
+        background: linear-gradient(135deg, #ffffff, #4091CD);
+        color: #000;
+    }

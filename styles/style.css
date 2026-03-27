@@ -358,6 +358,36 @@
     text-transform: uppercase;
 }
 
+.cta-aside {
+    display: block;
+
+    width: 90%; /* ocupa quase toda a tela */
+    margin: 2rem auto;
+
+    padding: 1.5rem;
+
+    background-color: #000;
+    color: #fff;
+
+    border: 1px solid var(--primary-color);
+
+    text-align: center;
+
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 3px;
+    font-size: 16px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.cta-aside:hover {
+    background-color: var(--primary-color);
+    color: #000;
+    transform: scale(1.02);
+}
+
 
 /*------------------------------------- bujinkan.html----------------------------------*/
 
@@ -401,3 +431,16 @@
 }
 
 /*-----------------------about.html-----------------*/
+
+/*----------------------bujinkan.html--------------*/
+
+ .cta-aside {
+        width: 40%;
+        font-size: 18px;
+    }
+
+.cta-aside:hover {
+    background-color: var(--primary-color);
+    color: #000;
+    transform: scale(1.02);
+}

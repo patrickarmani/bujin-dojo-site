@@ -145,3 +145,31 @@ if (asideCloseBtn && sobreAside) {
         sobreAside.style.display = 'none';
     });
 }
+
+
+const revealElements = document.querySelectorAll('.reveal');
+const header = document.querySelector('header');
+
+const revealOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.88;
+
+    revealElements.forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top;
+
+        if (elementTop < triggerBottom) {
+            element.classList.add('visible');
+        }
+    });
+};
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+
+    revealOnScroll();
+});
+
+window.addEventListener('load', revealOnScroll);

@@ -15,40 +15,40 @@ const carouselCounter = document.getElementById('carouselCounter');
 
 const imageData = [
     {
-        caption: 'Bu Jin Dojo',
-        aside: 'Seja bem vindo(a) à nossa escola para treinamento de Ninjas em Belo Horizonte. Aqui ensinamos Ninjutsu da escola Bujinkan.'
+        caption: 'Bem vindo(a) ao Bu Jin Dojo!',
+        aside: 'Nossa escola para treinamento de Ninjas fica em Belo Horizonte, região da Savassi. Sob a direção do Sensei Armani aqui é ensinado Ninjutsu da escola Bujinkan.'
     },
     {
-        caption: 'Técnica de torção',
-        aside: 'No Ninjutsu treinamos torções. Neste treino desenvolvemos controle corporal, aplicação técnica e consciência do movimento.'
+        caption: 'Aprenda Técnicas de torção',
+        aside: 'No Ninjutsu ensinamos e treinamos torções. Tecnicas importantes para o controle corporal do adversário e consciência do movimento de defesa.'
     },
     {
-        caption: 'Técnicas de projeção',
-        aside: 'No Ninjutsu, as técnicas de projeção não servem apenas para derrubar — elas ensinam controle. Desenvolvem domínio emocional, aumentam a autoconfiança e elevam o controle do corpo e da mente.'
+        caption: 'Aprenda Técnicas de projeção',
+        aside: 'No Ninjutsu, ensinamos a remover o equilibrio do adversário levando-o ao solo . O(A) praticante desenvolve domínio emocional, autoconfiança, trabalha a mobilidade e equilíbrio.'
     },
     {
-        caption: 'Técnicas de Imobilização',
-        aside: 'Algumas vezes é necessário controlar uma situação com segurança e responsabilidade. Aqui você desenvolve e aprimora o senso de autocontrole e a tomada de decisão sob pressão.'
+        caption: 'Aprenda Técnicas de Imobilização',
+        aside: 'Nem sempre o combate se faz necessário. Aqui você desenvolve e aprimora o senso de autocontrole e a tomada de decisão sob pressão e a imobilização de pessoas agressivas.'
     },
     {
-        caption: 'Técnicas de punho e chutes',
+        caption: 'Aprenda Técnicas de punho e chutes',
         aside: 'Dentro do grupo de técnicas o Ninjutsu também oferece variantes na forma de golpes com os punhos e chutes, bem como suas defesas',
     },
     {
-        caption: 'Uniforme de Treino',
-        aside: 'Nós usamos Kimono e camisa na cor preta, Hakama e jikka tabi. Até o segundo mês você tem liberdade para frequentar a aula sem o kimono. Em momento oportuno você adquire o uniforme comprelo.'
+        caption: 'O que devo vestir para o treino?',
+        aside: 'Nós usamos Kimono e camisa na cor preta, Hakama e jikka tabi. Até o segundo mês você tem liberdade para frequentar a aula sem o kimono. Em momento oportuno você adquire o uniforme completo.'
     },
     {
-        caption: 'Treino com armas tradicionais',
+        caption: 'Aprenda a usar um arsenal tradicional',
         aside: 'Com um arsenal rico e diversificado o Ninjutusu possui numerosas armas de combate tradicionais como bastões, espadas, armas de corte e acessórios que podem ser adaptados para situações cotidianas."'
     },
     {
         caption: 'Avanço técnico',
-        aside: 'No dojo respeitamos o limite do corpo e do aprendizado. Entendemos que cada individuo é único e o(a) praticante avança do absoluto zero progredindo dentro dos 10 kyus ou graus que antecedem a faixa preta.'
+        aside: 'No Bu Jin dojo respeitamos o limite do corpo e do aprendizado de cada um. Entendemos que cada individuo é único e o(a) praticante avança do absoluto zero progredindo dentro dos 10 kyus ou graus que antecedem a faixa preta.'
     },
     {
-        caption: 'Propósito',
-        aside: 'O Ninjtusu não visa campeonatos ou competições. Treinamos com foco em auto-defesa e sobrevivência, estratégia de luta e estilo de vida.'
+        caption: 'Como saber se o Ninjutsu é para mim?',
+        aside: 'Agende sua aula experimental. Se você for aceito, então discutiremos esta questão.'
     }
 ];
 

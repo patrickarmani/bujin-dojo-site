@@ -1,17 +1,28 @@
 :root {
     --primary-color: #060A19;
-    --secundary-color: #2E5175;
+    --secondary-color: #2E5175;
     --tertiary-color: #010204;
     --quaternary-color: #A8C5E5;
-    --quinternary-color: #4091CD;
-    --sextnary-color: #242934;
-    --primary-font-color: white;
-    --secundary-font-color: #274063;
+    --accent-color: #4091CD;
+    --surface-color: #242934;
+    --text-color: #ffffff;
+    --text-soft: rgba(255, 255, 255, 0.78);
+    --text-muted: rgba(255, 255, 255, 0.62);
+    --line-soft: rgba(255, 255, 255, 0.05);
+    --line-accent: rgba(64, 145, 205, 0.28);
+    --shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.18);
+    --shadow-medium: 0 12px 28px rgba(0, 0, 0, 0.30);
+    --shadow-strong: 0 16px 34px rgba(0, 0, 0, 0.42);
     --main-font: Roboto, Arial, sans-serif;
-    --second-font: 'Bebas Neue', sans-serif;
+    --display-font: "Bebas Neue", sans-serif;
+    --radius-sm: 10px;
+    --radius-md: 14px;
+    --radius-pill: 999px;
 }
 
-/* RESET */
+/* =========================
+   RESET + BASE
+========================= */
 *,
 *::before,
 *::after {
@@ -20,17 +31,14 @@
     padding: 0;
 }
 
-body {
-    background-color: #000;
-    font-family: var(--main-font);
-}
-
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    color: white;
+    background-color: #000;
+    color: var(--text-color);
+    font-family: var(--main-font);
     overflow-x: hidden;
 }
 
@@ -39,478 +47,27 @@ img {
     max-width: 100%;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 section {
     position: relative;
 }
 
-.logo-link {
-    display: inline-block;
-}
-
-/* BOTÃO MENU */
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: var(--quaternary-color);
-    font-family: var(--second-font);
-    cursor: pointer;
-    text-decoration: none;
-}
-
-/* LOGO */
-#logo {
-    width: 70px;
-    height: auto;
-    display: block;
-}
-
-header.scrolled {
-    background-color: rgba(6, 10, 25, 0.88);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-
-    /* HEADER */
-    header {
-        background-color: var(--primary-color);
-        padding: 0.5rem 1rem;
-    }
-
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .menu-toggle {
-        display: block;
-        margin-right: 1rem;
-    }
-
-    #logo {
-        width: 80px;
-    }
-
-    /* HERO */
-    .hero {
-        background-image:
-            linear-gradient(
-                to bottom,
-                rgba(0, 0, 0, 0.20),
-                rgba(0, 0, 0, 0.45),
-                rgba(0, 0, 0, 0.78)
-            ),
-            url("../images/hero-bujinkan.png");
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        min-height: 100vh;
-        position: relative;
-    }
-
-.hero-overlay {
-    min-height: 100vh;
-    padding-top: 1rem;
-    padding-bottom: 3rem;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.10),
-        rgba(0, 0, 0, 0.35),
-        rgba(0, 0, 0, 0.82)
-    );
-}
-
-    .hero-content {
-        width: 100%;
-    }
-
-.titulo {
-    font-family: var(--second-font);
-    font-size: 80px;
-    line-height: 0.84;
-    letter-spacing: 3px;
-    margin: 2rem 2rem 1.5rem 2rem;
-}
-
-.titulo span {
-    display: block;
-    color: white;
-    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
-}
-
-    #ninjutsu {
-        font-size: 85px;
-        letter-spacing: 6px;
-    }
-
-    .sub-titulo {
-        margin: 2rem;
-        font-family: var(--second-font);
-        font-size: 22px;
-        letter-spacing: 3px;
-        line-height: 1.2;
-}
-
-    .sub-titulo span {
-        display: block;
-        color: white;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-    }
-
-    .chamada {
-        font-family: var(--second-font);
-        font-size: 20px;
-        color: var(--quinternary-color);
-        margin: 2rem;
-        letter-spacing: 5px;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-    }
-
-    #address {
-        font-family: var(--second-font);
-        font-weight: 200;
-        color: white;
-        font-size: 14px;
-        margin: 0 2rem 2rem 2rem;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-        line-height: 1.4;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    /* CARROSSEL */
-    .carousel-section {
-        margin: 2rem 0 0 0;
-        padding-left: 20px;
-        padding-right: 0;
-        overflow: hidden;
-    }
-
-    .carousel-info {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        margin-bottom: 0.8rem;
-        width: 280px;
-    }
-
-    .carousel-info-left {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        min-width: 0;
-        color: white;
-    }
-
-    .carousel-caption {
-        background: none;
-        border: none;
-        padding: 0;
-        font-family: var(--main-font);
-        font-size: 12px;
-        color: white;
-        text-align: left;
-        cursor: pointer;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .carousel-counter {
-        font-family: var(--main-font);
-        font-size: 12px;
-        color: var(--quinternary-color);
-        flex-shrink: 0;
-    }
-
-    .carousel-track-container {
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-        touch-action: pan-y;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    .carousel-track {
-        display: flex;
-        gap: 12px;
-        transition: transform 0.35s ease;
-        align-items: center;
-    }
-
-.carousel-image {
-    width: 260px;
-    height: 250px;
-    object-fit: cover;
-    flex-shrink: 0;
-    user-select: none;
-    -webkit-user-drag: none;
-    transform: scale(0.92);
-    transition: transform 0.35s ease, opacity 0.35s ease, box-shadow 0.35s ease;
-    opacity: 0.72;
-    border-radius: 12px;
-    box-shadow: 0 12px 28px rgba(0,0,0,0.30);
-}
-
-.carousel-image.active {
-    transform: scale(1);
-    opacity: 1;
-    box-shadow: 0 16px 34px rgba(0,0,0,0.42);
-}
-
-    .carousel-aside {
-        display: none;
-        background-color: rgba(36, 41, 52, 0.95);
-        color: var(--primary-font-color);
-        padding: 0.8rem 1rem;
-        margin-bottom: 1rem;
-        width: 280px;
-        border-left: 3px solid var(--quinternary-color);
-        font-family: var(--main-font);
-        font-size: 12px;
-        line-height: 1.4;
-    }
-
-    .carousel-aside.active {
-        display: block;
-    }
-}
-
-/* ABOUT */
-.sobre-page {
-    background-color: #f2f2f2;
-    min-height: 100vh;
-}
-
-.sobre-conteudo {
-    padding: 2rem 1.5rem 3rem 1.5rem;
-    position: relative;
-}
-
-.bujinkan-topo .sobre-titulo {
-    color: rgba(255, 255, 255, 0.18);
-}
-
-.sobre-titulo {
-    font-family: var(--second-font);
-    font-size: 58px;
-    line-height: 1.05;
-    letter-spacing: 2px;
-    /*color: rgba(64, 145, 205, 0.18);*/
-    color: var(--quaternary-color);
-    max-width: 310px;
-}
-
-.sobre-titulo span {
-    display: block;
-}
-
-.sobre-frase {
-    margin-top: 1.5rem;
-    max-width: 310px;
-    color: rgba(255,255,255,0.78);
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.instagram-link {
-    display: block;
-    width: fit-content;
-    margin: 0 auto;
-    color: var(--quinternary-color);
-    text-decoration: none;
-    font-family: var(--second-font);
-    font-size: 18px;
-    letter-spacing: 2px;
-}
-
-.sobre-aside {
-    display: grid;
-    width: 100%;
-    max-width: 320px;
-    min-height: 110px;
-    margin: 0 auto 1.8rem auto;
-
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-
-    border: 1px solid rgba(64,145,205,0.25);
-    border-radius: 14px;
-    padding: 1rem;
-    grid-template-columns: 100px 1fr;
-    column-gap: 0.9rem;
-    align-items: center;
-    position: relative;
-    background: rgba(255,255,255,0.02);
-    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.sobre-aside:active {
-    transform: scale(0.97);
-}
-
-.aside-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    color: rgba(64,145,205,0.55);
-    pointer-events: none;
-}
-
-.sobre-aside:hover {
-    box-shadow: 0 16px 34px rgba(0,0,0,0.35);
-}
-
-.aside-image-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.aside-texto {
-    padding-top: 0.2rem;
-    padding-right: 1.2rem;
-}
-
-.aside-texto h3 {
-    font-family: var(--second-font);
-    font-size: 20px;
-    letter-spacing: 1px;
-    color: white;
-    margin-bottom: 0.5rem;
-}
-
-.aside-texto p {
-    font-family: var(--main-font);
-    font-size: 12px;
-    line-height: 1.5;
-    color: rgba(255,255,255,0.72);
-}
-
-/* BUJINKAN */
-
-.bujinkan-frase {
-    margin: 1.5rem 1.5rem 0 1.5rem;
-    max-width: 320px;
-    color: rgba(255,255,255,0.82);
-    font-size: 14px;
-    line-height: 1.6;
-    text-transform: uppercase;
-}
-
-.bujinkan-frase::after {
-    content: "";
-    display: block;
-    width: 100%;
-    max-width: 90px;
-    height: 2px;
-    margin-top: 1.2rem;
-    background: linear-gradient(90deg, var(--quinternary-color), transparent);
-}
-
-.bujinkan-blocos {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.bujinkan-card p {
-    color: rgba(255,255,255,0.82);
-    font-size: 13px;
-    line-height: 1.65;
-    text-transform: uppercase;
-}
-
-.bujinkan-card:active {
-    transform: scale(0.98);
-}
-
-.bujinkan-card h2 {
-    font-family: var(--second-font);
-    font-size: 24px;
-    line-height: 1.05;
-    letter-spacing: 1px;
-    color: #ffffff;
-    margin-bottom: 0.8rem;
-}
-
-.bujinkan-card p {
-    color: rgba(255,255,255,0.76);
-    font-size: 13px;
-    line-height: 1.65;
-    text-transform: uppercase;
-}
-
-.destaque-final {
-    border-color: rgba(64,145,205,0.45);
-    box-shadow: 0 14px 28px rgba(0,0,0,0.22);
-}
-
-.bujinkan-cta-final {
-    padding: 1rem 1.5rem 3rem 1.5rem;
-}
-
-.cta-aside {
-    display: block;
-    width: 90%;
-    margin: 2rem auto 1.5rem auto;
-    padding: 1rem 1.2rem;
-    background: linear-gradient(135deg, #4091CD, #1e3a5f);
-    color: #fff;
-    border: 1px solid rgba(255,255,255,0.10);
-    border-radius: 14px;
-    text-align: center;
-    font-family: var(--second-font);
-    letter-spacing: 2px;
-    font-size: 15px;
-    text-decoration: none;
-    box-shadow:
-        0 12px 28px rgba(0,0,0,0.35),
-        inset 0 0 10px rgba(255,255,255,0.05);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
-    animation: pulse 2s infinite;
-}
-
-.cta-aside:active {
-    transform: scale(0.98);
-    filter: brightness(1.04);
-}
-
-
-
+/* =========================
+   ANIMAÇÕES UTILITÁRIAS
+========================= */
 @keyframes pulse {
     0% {
-        box-shadow: 0 0 0 0 rgba(64, 145, 205, 0.6);
+        box-shadow: 0 0 0 0 rgba(64, 145, 205, 0.55);
     }
     70% {
         box-shadow: 0 0 0 15px rgba(64, 145, 205, 0);
     }
     100% {
         box-shadow: 0 0 0 0 rgba(64, 145, 205, 0);
-    }
-}
-
-@keyframes revealUp {
-    from {
-        opacity: 0;
-        transform: translateY(24px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
 
@@ -525,46 +82,185 @@ header.scrolled {
     transform: translateY(0);
 }
 
-.cta-aside:hover {
+/* =========================
+   HEADER
+========================= */
+header {
     background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header.scrolled {
+    background-color: rgba(6, 10, 25, 0.88);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-link {
+    display: inline-block;
+}
+
+#logo {
+    width: 80px;
+    height: auto;
+    display: block;
+}
+
+.menu-toggle {
+    display: block;
+    font-size: 24px;
     color: var(--quaternary-color);
-    transform: scale(1.05);
+    font-family: var(--display-font);
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   HOME - HERO
+========================= */
+.hero {
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.20),
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.78)
+        ),
+        url("../images/fujibujinkan.webp");
+    background-size: 70%;
+    background-position: top right;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+
+.hero-overlay {
+    min-height: 100vh;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.30),
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0.82)
+    );
+}
+
+.hero-content {
+    width: 100%;
+}
+
+.titulo {
+    font-family: var(--display-font);
+    font-size: 80px;
+    line-height: 0.84;
+    letter-spacing: 3px;
+    margin: 2rem 2rem 1.5rem 2rem;
+    text-shadow: #000;
+}
+
+.titulo span {
+    display: block;
+    color: #fff;
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+#ninjutsu {
+    font-size: 85px;
+    letter-spacing: 6px;
+}
+
+.sub-titulo {
+    margin: 0 2rem 1.5rem 2rem;
+    font-family: var(--display-font);
+    font-size: 22px;
+    letter-spacing: 3px;
+    line-height: 1.2;
+}
+
+.sub-titulo span {
+    display: block;
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 .hero-frase {
     margin: 0 2rem 1.6rem 2rem;
-    color: rgba(255, 255, 255, 0.78);
-    font-family: var(--main-font);
+    color: var(--text-soft);
     font-size: 14px;
     line-height: 1.6;
     max-width: 320px;
 }
 
-.cta-hero {
+#address {
+    font-family: var(--display-font);
+    font-weight: 200;
+    color: #fff;
+    font-size: 14px;
+    margin: 0 2rem 2rem 2rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    line-height: 1.4;
+}
+
+/* =========================
+   BOTÕES / CTA
+========================= */
+.cta-hero,
+.cta-aside {
     display: block;
     width: 90%;
     margin: 0 auto 1.5rem auto;
     padding: 1rem 1.2rem;
-    background: linear-gradient(135deg, #4091CD, #1e3a5f);
+    background: linear-gradient(135deg, var(--accent-color), #1e3a5f);
     color: #fff;
-    border: 1px solid rgba(255,255,255,0.10);
-    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: var(--radius-md);
     text-align: center;
-    font-family: var(--second-font);
+    font-family: var(--display-font);
     letter-spacing: 2px;
-    font-size: 16px;
-    text-decoration: none;
+    font-size: 15px;
     box-shadow:
-        0 12px 28px rgba(0,0,0,0.35),
-        inset 0 0 10px rgba(255,255,255,0.05);
+        0 12px 28px rgba(0, 0, 0, 0.35),
+        inset 0 0 10px rgba(255, 255, 255, 0.05);
     transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
 
-.cta-hero:active {
+.cta-hero {
+    font-size: 16px;
+}
+
+.cta-hero:active,
+.cta-aside:active {
     transform: scale(0.98);
     filter: brightness(1.04);
 }
 
+.cta-aside {
+    margin: 2rem auto 1.5rem auto;
+    animation: pulse 2s infinite;
+}
+
+.cta-final-texto {
+    color: #fff;
+    font-family: var(--display-font);
+    font-size: 28px;
+    line-height: 1.15;
+    letter-spacing: 2px;
+    margin-bottom: 1.2rem;
+}
+
+/* =========================
+   HOME - SEÇÕES
+========================= */
 .para-quem,
 .beneficios,
 .como-funciona,
@@ -580,7 +276,7 @@ header.scrolled {
     content: "";
     display: block;
     height: 1px;
-    background: rgba(255,255,255,0.05);
+    background: var(--line-soft);
     margin-top: 2rem;
 }
 
@@ -588,15 +284,15 @@ header.scrolled {
 .beneficios h2,
 .como-funciona h2,
 .diferencial h2 {
-    font-family: var(--second-font);
+    font-family: var(--display-font);
     font-size: 32px;
     letter-spacing: 2px;
-    color: white;
+    color: #fff;
     margin-bottom: 1rem;
 }
 
 .lista-beneficios p {
-    color: rgba(255,255,255,0.82);
+    color: rgba(255, 255, 255, 0.82);
     font-size: 14px;
     line-height: 1.5;
     margin-bottom: 0.8rem;
@@ -610,22 +306,22 @@ header.scrolled {
 }
 
 .benefit-card {
-    background-color: rgba(255,255,255,0.03);
-    border: 1px solid rgba(64,145,205,0.32);
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(64, 145, 205, 0.32);
     border-radius: 12px;
     padding: 1rem 0.8rem;
     text-align: center;
-    color: white;
-    font-family: var(--second-font);
+    color: #fff;
+    font-family: var(--display-font);
     letter-spacing: 2px;
     font-size: 16px;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .benefit-card:active {
     transform: scale(0.98);
-    border-color: rgba(64,145,205,0.7);
+    border-color: rgba(64, 145, 205, 0.70);
 }
 
 .passos {
@@ -635,66 +331,315 @@ header.scrolled {
 }
 
 .passo {
-    background-color: rgba(255,255,255,0.03);
-    border-left: 3px solid var(--quinternary-color);
+    background-color: rgba(255, 255, 255, 0.03);
+    border-left: 3px solid var(--accent-color);
     padding: 1rem;
-    color: rgba(255,255,255,0.88);
+    color: rgba(255, 255, 255, 0.88);
     font-size: 14px;
     line-height: 1.4;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 .diferencial p {
-    color: rgba(255,255,255,0.82);
+    color: rgba(255, 255, 255, 0.82);
     font-size: 14px;
     line-height: 1.6;
     text-transform: uppercase;
 }
 
-.cta-final-texto {
-    color: white;
-    font-family: var(--second-font);
-    font-size: 28px;
-    line-height: 1.15;
-    letter-spacing: 2px;
-    margin-bottom: 1.2rem;
+/* =========================
+   HOME - CARROSSEL
+========================= */
+.carousel-section {
+    margin: 2rem 0 0 0;
+    padding-left: 20px;
+    padding-right: 0;
+    overflow: hidden;
 }
 
-.whatsapp-float {
-    position: fixed;
-    right: 16px;
-    bottom: 16px;
-    z-index: 999;
-    background: linear-gradient(135deg, #25D366, #128C7E);
+.carousel-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 0.8rem;
+    width: 280px;
+}
+
+.carousel-info-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
     color: #fff;
-    padding: 12px 18px;
-    border-radius: 999px;
-    font-size: 13px;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow:
-        0 10px 28px rgba(0,0,0,0.4),
-        0 0 18px rgba(37, 211, 102, 0.20);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.whatsapp-float:active {
-    transform: scale(0.96);
+.carousel-caption {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: var(--main-font);
+    font-size: 12px;
+    color: #fff;
+    text-align: left;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.carousel-counter {
+    font-family: var(--main-font);
+    font-size: 12px;
+    color: var(--accent-color);
+    flex-shrink: 0;
+}
+
+.carousel-aside {
+    display: none;
+    background-color: rgba(36, 41, 52, 0.95);
+    color: #fff;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    width: 280px;
+    border-left: 3px solid var(--accent-color);
+    font-family: var(--main-font);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.carousel-aside.active {
+    display: block;
+}
+
+.carousel-track-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    touch-action: pan-y;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 12px;
+    transition: transform 0.35s ease;
+    align-items: center;
+}
+
+.carousel-image {
+    width: 260px;
+    height: 250px;
+    object-fit: cover;
+    flex-shrink: 0;
+    user-select: none;
+    -webkit-user-drag: none;
+    transform: scale(0.92);
+    transition: transform 0.35s ease, opacity 0.35s ease, box-shadow 0.35s ease;
+    opacity: 0.72;
+    border-radius: 12px;
+    box-shadow: var(--shadow-medium);
+}
+
+.carousel-image.active {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: var(--shadow-strong);
+}
+
+/* =========================
+   ABOUT
+========================= */
+.sobre-page {
+    background-color: #000;
+    min-height: 100vh;
+}
+
+.sobre-conteudo {
+    padding: 2rem 1.5rem 3rem 1.5rem;
+    position: relative;
+}
+
+.sobre-titulo {
+    font-family: var(--display-font);
+    font-size: 58px;
+    line-height: 1.05;
+    letter-spacing: 2px;
+    color: var(--quaternary-color);
+    max-width: 310px;
+}
+
+.sobre-titulo span {
+    display: block;
+}
+
+.sobre-frase {
+    margin-top: 1.5rem;
+    max-width: 310px;
+    color: var(--text-soft);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.instagram-link {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    color: var(--accent-color);
+    font-family: var(--display-font);
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.sobre-aside {
+    display: grid;
+    width: 100%;
+    max-width: 320px;
+    min-height: 110px;
+    margin: 0 auto 1.8rem auto;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    border: 1px solid rgba(64, 145, 205, 0.25);
+    border-radius: 14px;
+    padding: 1rem;
+    grid-template-columns: 100px 1fr;
+    column-gap: 0.9rem;
+    align-items: center;
+    position: relative;
+    background: rgba(255, 255, 255, 0.02);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sobre-aside:active {
+    transform: scale(0.97);
+}
+
+.aside-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: rgba(64, 145, 205, 0.55);
+    pointer-events: none;
+}
+
+.aside-image-box {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.aside-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.aside-texto {
+    padding-top: 0.2rem;
+    padding-right: 1.2rem;
+}
+
+.aside-texto h3 {
+    font-family: var(--display-font);
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.aside-texto p {
+    font-family: var(--main-font);
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+/* =========================
+   BUJINKAN
+========================= */
+.bujinkan-topo .sobre-titulo {
+    color: rgba(255, 255, 255, 0.28);
+}
+
+.bujinkan-frase {
+    margin: 1.5rem 1.5rem 0 1.5rem;
+    max-width: 320px;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 14px;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+.bujinkan-frase::after {
+    content: "";
+    display: block;
+    width: 100%;
+    max-width: 90px;
+    height: 2px;
+    margin-top: 1.2rem;
+    background: linear-gradient(90deg, var(--accent-color), transparent);
+}
+
+.bujinkan-blocos {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.bujinkan-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(64, 145, 205, 0.22);
+    border-radius: 14px;
+    padding: 1rem;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+    transition: transform 0.2s ease;
+}
+
+.bujinkan-card:active {
+    transform: scale(0.98);
+}
+
+.bujinkan-card h2 {
+    font-family: var(--display-font);
+    font-size: 24px;
+    line-height: 1.05;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-bottom: 0.8rem;
+}
+
+.bujinkan-card p {
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 13px;
+    line-height: 1.65;
+    text-transform: uppercase;
+}
+
+.destaque-final {
+    border-color: rgba(64, 145, 205, 0.45);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
+}
+
+.bujinkan-cta-final {
+    padding: 1rem 1.5rem 3rem 1.5rem;
 }
 
 .video-container {
     width: 100%;
     max-width: 320px;
     height: 450px;
-
-    margin: 1.5rem auto 1.5rem auto;
-
+    margin: 1.5rem auto;
     border-radius: 14px;
     overflow: hidden;
-
-    border: 1px solid rgba(64,145,205,0.25);
-
-    box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+    border: 1px solid rgba(64, 145, 205, 0.25);
+    background: rgba(255, 255, 255, 0.02);
+    box-shadow: var(--shadow-medium);
 }
 
 .video-container iframe {
@@ -703,14 +648,35 @@ header.scrolled {
     border: none;
 }
 
-.video-container {
-    background: rgba(255,255,255,0.02);
+/* =========================
+   WHATSAPP FLUTUANTE
+========================= */
+.whatsapp-float {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 999;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: var(--radius-pill);
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.4),
+        0 0 18px rgba(37, 211, 102, 0.20);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* DESKTOP */
+.whatsapp-float:active {
+    transform: scale(0.96);
+}
+
+/* =========================
+   DESKTOP
+========================= */
 @media (min-width: 1024px) {
     header {
-        background-color: var(--primary-color);
         padding: 0.5rem 1rem;
     }
 
@@ -724,21 +690,8 @@ header.scrolled {
         display: none;
     }
 
-    .menu {
-        display: flex;
-        list-style: none;
-        gap: 2rem;
-    }
-
-    .menu a {
-        color: var(--primary-font-color);
-        text-decoration: none;
-        font-family: var(--main-font);
-    }
-
     #logo {
         width: 70px;
-        height: auto;
         margin-left: 0;
     }
 
@@ -747,9 +700,15 @@ header.scrolled {
         font-size: 18px;
     }
 
+    .cta-aside:hover,
+    .cta-hero:hover,
+    .sobre-aside:hover,
+    .whatsapp-float:hover {
+        transform: translateY(-2px);
+    }
+
     .cta-aside:hover {
-        transform: scale(1.05);
-        background: linear-gradient(135deg, #ffffff, #4091CD);
+        background: linear-gradient(135deg, #ffffff, var(--accent-color));
         color: #000;
     }
 }

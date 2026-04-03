@@ -161,7 +161,7 @@ nav {
 
 .titulo {
     font-family: var(--display-font);
-    font-size: 80px;
+    font-size: 60px;
     line-height: 0.84;
     letter-spacing: 3px;
     margin: 2rem 2rem 1.5rem 2rem;
@@ -173,6 +173,7 @@ nav {
     color: #fff;
     text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
 }
+
 
 #ninjutsu {
     font-size: 85px;
@@ -191,6 +192,12 @@ nav {
     display: block;
     color: #fff;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 15px;
+}
+
+.sub-titulo span:nth-child(2) {
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 .hero-frase {

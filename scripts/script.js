@@ -47,8 +47,8 @@ const imageData = [
         aside: 'No Bu Jin dojo respeitamos o limite do corpo e do aprendizado de cada um. Entendemos que cada individuo é único e o(a) praticante avança do absoluto zero progredindo dentro dos 10 kyus ou graus que antecedem a faixa preta.'
     },
     {
-        caption: 'Como saber se o Ninjutsu é para mim?',
-        aside: 'Agende sua aula experimental. Se você for aceito, então discutiremos esta questão.'
+        caption: 'O ninjtusu é pra você?',
+        aside: 'Existe uma versão sua mais forte, mais consciente e mais preparada. Aqui é onde ela desperta. Nem tudo pode ser explicado. Algumas coisas só podem ser vividas.'
     }
 ];
 

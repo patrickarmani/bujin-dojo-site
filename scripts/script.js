@@ -15,8 +15,8 @@ const carouselCounter = document.getElementById('carouselCounter');
 
 const imageData = [
     {
-        caption: 'Bem vindo(a) ao Bu Jin Dojo!',
-        aside: 'Nossa escola para treinamento de Ninjas fica em Belo Horizonte, região da Savassi. Sob a direção do Sensei Armani aqui é ensinado Ninjutsu da escola Bujinkan.'
+        caption: 'Aprenda a se proteger de verdade',
+        aside: 'Treinamento seguro, progressivo e adaptado para todos os níveis.'
     },
     {
         caption: 'Aprenda Técnicas de torção',

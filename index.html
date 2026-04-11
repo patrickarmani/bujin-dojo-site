@@ -18,6 +18,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+    <div id="desktop-warning" class="desktop-warning">
+        <div class="desktop-warning__box">
+            <h1>👀 Opa! Ainda estamos treinando a versão desktop</h1>
+            <p>
+            Por enquanto, este site foi pensado para celular.
+            Para ter a melhor experiência, acesse em um aparelho móvel 📱
+            <strong>Patrick Marcman - Software Developer</strong 
+            </p>
+        </div>
+    </div>
 
     <header>
         <nav>
@@ -166,5 +176,21 @@
     <footer></footer>
 
     <script src="scripts/script.js"></script>
+
+    <!--Script adicionado para ser usado apenas equanto o desktop esta em construcao-->
+    <script>
+        function checkDesktopMode() {
+            const isDesktop = window.innerWidth >= 1024;
+
+            if (isDesktop) {
+            document.body.classList.add("desktop-mode");
+            } else {
+            document.body.classList.remove("desktop-mode");
+            }
+        }
+
+        checkDesktopMode();
+        window.addEventListener("resize", checkDesktopMode);
+    </script>
 </body>
 </html>

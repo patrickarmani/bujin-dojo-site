@@ -1,0 +1,19 @@
+/* opcional: regras globais pequenas */
+.hero-desktop {
+  display: none;
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+
+  .hero {
+    display: none;
+  }
+
+  .hero-desktop {
+    display: block;
+  }
+
+  /* aqui entra TODO o layout desktop */
+
+}
